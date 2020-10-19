@@ -10,7 +10,7 @@ try {
   );
 
   $bot->command('/sendString', function ($message) use ($bot) {
-    $bot->sendMessage($message->getChat()->getId(), uniqid('', true));
+    $bot->sendMessage(179897095, '12345');
   });
 
   $bot->run();
