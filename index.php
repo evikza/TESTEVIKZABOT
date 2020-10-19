@@ -12,7 +12,7 @@ try {
   $bot->command('awesome', function ($message) use ($bot) {
     $bot->sendMessage($message->getChat()->getId(), '1234567890');
   });
-  
+
   $bot->command('video', function ($message) use ($bot) {
     $videoFile = new \CURLFile(
       'https://raw.githubusercontent.com/TelegramBots/book/master/src/docs/video-countdown.mp4'
@@ -22,10 +22,14 @@ try {
       $message->getChat()->getId(),
       $videoFile,
       null,
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      null,
+      null,
+      null,
+      true
     );
   });
-  
+
   $bot->run();
 } catch (\TelegramBot\Api\Exception $e) {
   $e->getMessage();
