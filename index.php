@@ -10,7 +10,7 @@ try {
   );
 
   $bot->command('awesome', function ($message) use ($bot) {
-    $bot->sendMessage($message->getChat()->getId(), '123456789');
+    $bot->sendMessage($message->getChat()->getId(), '1234567890');
   });
   
   $bot->command('video', function ($message) use ($bot) {
@@ -24,6 +24,7 @@ try {
       null,
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     );
+  });
   
   $bot->run();
 } catch (\TelegramBot\Api\Exception $e) {
