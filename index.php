@@ -21,9 +21,9 @@ try {
     $bot->sendVideo(
       $message->getChat()->getId(),
       $videoFile,
+      null,
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     );
-  });
   
   $bot->run();
 } catch (\TelegramBot\Api\Exception $e) {
