@@ -9,26 +9,20 @@ try {
     '1154181768:AAEU8Rx6H7GeMYlrUkT3pysRfTCifEyPAg0'
   );
 
-  $bot->command('awesome', function ($message) use ($bot) {
-    $bot->sendMessage($message->getChat()->getId(), '1234567890');
-  });
-
   $bot->command('video', function ($message) use ($bot) {
     $videoFile = new \CURLFile(
       'https://raw.githubusercontent.com/TelegramBots/book/master/src/docs/video-countdown.mp4'
     );
 
     $bot->sendVideo(
-      $message->getChat()->getId(),
-      $videoFile,
-      null,
-      '🌎﻿Теперь Вы понимаете, какая миссия  нам с Вами предстоит? Громко конечно звучит - спасаем планету, однако, используя меньше химии, мы в первую очередь делаем хорошо себе!﻿😉﻿
-Что же это за чудный продукт, который сегодня нужен каждому человеку и почему его выгодно использовать?
-Об этом будет следующее видео. 17 минут информации о продукции. Видео будет интересным!',
-      null,
-      null,
-      null,
-      true
+      $message->getChat()->getId(), // chatId — идентификатор чата
+      $videoFile, // video — загружаемый файл
+      null, // duration — длина видео
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // caption — описание под видео
+      null, // reply_to_message_id — см. документацию
+      null, // reply_markup — см. документацию
+      null, // disable_notification — см. документацию
+      true // supports_streaming — подгрузка и автоматическое воспроизведение при получении сообщения. При необходимости — убрать
     );
   });
 
