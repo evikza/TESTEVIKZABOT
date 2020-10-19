@@ -9,7 +9,7 @@ try {
     '1154181768:AAEU8Rx6H7GeMYlrUkT3pysRfTCifEyPAg0'
   );
 
-  $bot->command('/sendString', function ($message) use ($bot) {
+  $bot->command('awesome', function ($message) use ($bot) {
     $bot->sendMessage(179897095, '12345');
   });
 
