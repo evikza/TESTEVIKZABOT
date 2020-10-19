@@ -1,5 +1,7 @@
 <?php
 
+// EMOJI!
+
 require_once 'vendor/autoload.php';
 
 try {
