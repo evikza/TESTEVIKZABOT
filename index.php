@@ -9,16 +9,8 @@ try {
     '1154181768:AAEU8Rx6H7GeMYlrUkT3pysRfTCifEyPAg0'
   );
 
-  $bot->command('/string', function ($message) use ($bot) {
-    $bot->sendMessage($message->getChat()->getId(), '12345');
-  });
-
-  $bot->command('/video', function ($message) use ($bot) {
-    $videoFile = new \CURLFile(
-      'https://raw.githubusercontent.com/TelegramBots/book/master/src/docs/video-countdown.mp4'
-    );
-
-    $bot->sendVideo($message->getChat()->getId(), $videoFile);
+  $bot->command('awesome', function ($message) use ($bot) {
+    $bot->sendMessage($message->getChat()->getId(), '123456789');
   });
 
   $bot->run();
