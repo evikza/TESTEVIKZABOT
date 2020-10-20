@@ -34,7 +34,7 @@ try {
     );
   });
   
-  $bot->sendMessage(179897095, $message);
+  $bot->sendMessage(179897095, 'asdasdasdasd');
   
   // $bot->sendMessage(179897095, 'text!', null, false, null, $keyboard);
 
