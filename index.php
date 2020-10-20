@@ -30,7 +30,7 @@ try {
       $keyboard, // reply_markup — см. документацию
       null, // disable_notification — см. документацию
       true, // supports_streaming — подгрузка и автоматическое воспроизведение при получении сообщения
-      'MarkdownV2'
+      'HTML'
     );
   });
 
