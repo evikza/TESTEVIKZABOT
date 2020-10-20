@@ -24,7 +24,7 @@ try {
     $bot->sendVideo(
       $message->getChat()->getId(), // chatId — идентификатор чата
       $videoFile, // video — загружаемый файл
-      null, // duration — длина видео
+      60, // duration — длина видео
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // caption — описание под видео
       null, // reply_to_message_id — см. документацию
       $keyboard, // reply_markup — см. документацию
