@@ -33,7 +33,7 @@ try {
       'HTML'
     );
     
-    $bot->sendMessage(179897095, json_encode($message));
+    $bot->sendMessage(179897095, stripslahses(json_encode($message)));
   });
   
   // $bot->sendMessage(179897095, 'text!', null, false, null, $keyboard);
