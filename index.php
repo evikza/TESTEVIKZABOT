@@ -20,12 +20,17 @@ try {
     $videoFile = new \CURLFile(
       'https://raw.githubusercontent.com/TelegramBots/book/master/src/docs/video-countdown.mp4'
     );
-
+    
+    ob_start();
+    var_dump($message);
+    $result = ob_get_contents();
+    ob_flush();
+    
     $bot->sendVideo(
       $message->getChat()->getId(), // chatId — идентификатор чата
       $videoFile, // video — загружаемый файл
       60, // duration — длина видео
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // caption — описание под видео
+      $message, // caption — описание под видео
       null, // reply_to_message_id — см. документацию
       $keyboard, // reply_markup — см. документацию
       null, // disable_notification — см. документацию
