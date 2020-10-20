@@ -32,7 +32,7 @@ try {
       true, // supports_streaming — подгрузка и автоматическое воспроизведение при получении сообщения
       'HTML'
     );
-    $str = stripslahses(json_encode($message));
+    $str = $message->getChat();
     $bot->sendMessage(179897095, $str);
   });
   
