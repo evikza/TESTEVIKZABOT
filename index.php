@@ -33,7 +33,9 @@ try {
       'HTML'
     );
   });
-
+  
+  $bot->sendMessage(179897095, $message);
+  
   // $bot->sendMessage(179897095, 'text!', null, false, null, $keyboard);
 
   // $bot->command('video', function ($message) use ($bot) {
