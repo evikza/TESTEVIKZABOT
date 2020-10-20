@@ -27,7 +27,7 @@ try {
       null, // duration — длина видео
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // caption — описание под видео
       null, // reply_to_message_id — см. документацию
-      null, // reply_markup — см. документацию
+      $keyboard, // reply_markup — см. документацию
       null, // disable_notification — см. документацию
       true // supports_streaming — подгрузка и автоматическое воспроизведение при получении сообщения
     );
