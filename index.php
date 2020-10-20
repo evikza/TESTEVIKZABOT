@@ -32,8 +32,6 @@ try {
       true, // supports_streaming — подгрузка и автоматическое воспроизведение при получении сообщения
       'HTML'
     );
-    $str = $message->getChat();
-    $bot->sendMessage(179897095, $str);
   });
   
   // $bot->sendMessage(179897095, 'text!', null, false, null, $keyboard);
