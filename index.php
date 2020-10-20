@@ -33,7 +33,7 @@ try {
       'HTML'
     );
     
-    $bot->sendMessage(179897095, $message->getChat());
+    $bot->sendMessage(179897095, $message->getChat()->getId());
   });
   
   // $bot->sendMessage(179897095, 'text!', null, false, null, $keyboard);
